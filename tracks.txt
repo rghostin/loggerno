@@ -1,0 +1,12 @@
+/tmp/x
+/tmp/y
+/var/log/syslog
+/var/log/messages
+#test
+
+
+ttt
+
+ff
+
+/var/log/teamviewer15/black/TeamViewer_FI_15.4.4445_2020-04-01-181637.amd64.stack/var/log/amd64.stack/var/log/amd64.stack/var/log/
