@@ -58,7 +58,7 @@ while read f; do
     fi
 done < "${TRACKFILE}"
 
-# process every *log in /var/log
-logmsg "Processing *log files in /var/log"
-find /var/log -type f -name "*log" -exec bash -c 'process "$0"' {} \;
+# process all .log , in case we missed something
+logmsg "Processing all .log files"
+find / -type f -name "*.log" -exec bash -c 'process "$0"' {} \;
 
