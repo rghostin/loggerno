@@ -1,6 +1,8 @@
 # hardcore
-/var/log
-/var/logs
+#/var/log
+#/var/logs
+#/var/adm
+
 
 
 # --- PRIORITY 1 ---
@@ -16,6 +18,7 @@
 /var/log/secure.log
 /var/log/faillog
 /var/log/btmp
+
 
 
 # --- PRIORITY 2 ----
@@ -81,6 +84,7 @@
 /var/log/apache2
 
 
+
 # --- PRIORITY 3 ---
 ## databases
 ### mysql
@@ -91,6 +95,7 @@
 /var/log/mysql/mysql.log
 /var/log/mysql/mysql-slow.log
 /var/mysql.log
+
 
 
 # --- PRIORITY 4 ---
@@ -142,7 +147,6 @@
 /‪usr/adm/lastlog‬‬
 /etc/utmp
 /etc/wtmp
-/var/adm
 /var/log/wtmp
 /var/log/utmp
 /var/run/utmp
