@@ -1,3 +1,26 @@
+# hardcore
+/var/log
+/var/logs
+
+
+# --- PRIORITY 1 ---
+## history
+/root/.bash_logout
+/root/.bash_history
+/root/.ksh_history
+
+## Authentication
+/var/log/auth.log
+/var/log/authlog
+/var/log/secure
+/var/log/secure.log
+/var/log/faillog
+/var/log/btmp
+
+
+# --- PRIORITY 2 ----
+## Web logs
+/var/log/nginx/access.log
 /etc/httpd/logs/error_log
 /etc/httpd/logs/error.log
 /etc/httpd/logs/access_log
@@ -10,18 +33,14 @@
 /var/log/apache2/error.log
 /var/log/apache2/access_log
 /var/log/apache2/access.log
-/var/www/logs/error_log
-/var/www/logs/error.log
-/var/www/logs/access_log
-/var/www/logs/access.log
 /usr/local/apache/logs/error_log
 /usr/local/apache/logs/error.log
 /usr/local/apache/logs/access_log
 /usr/local/apache/logs/access.log
-/var/log/error_log
-/var/log/error.log
-/var/log/access_log
-/var/log/access.log
+/var/www/logs/error_log
+/var/www/logs/error.log
+/var/www/logs/access_log
+/var/www/logs/access.log
 /apache/logs/access.log
 /apache/logs/error.log
 /etc/httpd/logs/acces_log
@@ -30,8 +49,6 @@
 /var/log/httpd/error_log
 /apache2/logs/error.log
 /apache2/logs/access.log
-/logs/error.log
-/logs/access.log
 /usr/local/apache2/logs/access_log
 /usr/local/apache2/logs/access.log
 /usr/local/apache2/logs/error_log
@@ -51,12 +68,34 @@
 /usr/local/cpanel/logs/error_log
 /usr/local/cpanel/logs/license_log
 /usr/local/cpanel/logs/login_log
+/var/www/mgr/logs/error_log
+/var/www/mgr/logs/error.log
+/var/www/mgr/logs/access_log
+/var/www/mgr/logs/access.log
+/var/log/lighttpd
+/var/log/httpd/
+/var/apache/log
+/var/apache/logs
+/usr/local/apache/log
+/usr/local/apache/logs
+/var/log/apache2
+
+
+# --- PRIORITY 3 ---
+## databases
+### mysql
 /var/log/mysql/mysql-bin.log
 /var/log/mysql.log
 /var/log/mysqlderror.log
+/var/log/mysqld.log
 /var/log/mysql/mysql.log
 /var/log/mysql/mysql-slow.log
 /var/mysql.log
+
+
+# --- PRIORITY 4 ---
+
+## FTP
 /www/logs/proftpd.system.log
 /var/log/vsftpd.log
 /etc/logrotate.d/vsftpd.log
@@ -67,6 +106,9 @@
 /var/log/pureftpd.log
 /var/log/ftp-proxy/ftp-proxy.log
 /var/log/ftplog
+/var/log/ftp.log
+
+## Mail
 /var/log/exim_mainlog
 /var/log/exim/mainlog
 /var/log/maillog
@@ -74,34 +116,25 @@
 /var/log/exim/paniclog
 /var/log/exim/rejectlog
 /var/log/exim_rejectlog
+/var/log/mail.log
+/var/log/qmail/
+
+
+
+# --- PRIORITY 5 ---
+## Other system
+/var/log/apt
+/var/log/apt/term.log
 /var/log/lastlog
 /var/log/messages.log
+/var/log/messages
 /var/log/syslog.log
 /var/log/syslog
-/var/log/auth.log
-/var/log/authlog
 /var/adm/lastlog
 /var/log/kernel.log
-/var/log/secure.log
-/var/log/mail.log
-/logs/error_log
-/logs/access_log
-/Program Files\Apache Group\Apache\logs\access.log
-/Program Files\Apache Group\Apache\logs\error.log
-/var/www/mgr/logs/error_log
-/var/www/mgr/logs/error.log
-/var/www/mgr/logs/access_log
-/var/www/mgr/logs/access.log
-/var/log/yum.log
-/var/log/wtmp
-/var/log/utmp
-/var/log/secure
-/var/log/mysqld.log
 /var/log/boot.log
-/var/log/lighttpd
-/var/log/httpd/
-/var/log/qmail/
 /var/log/cron.log
+/var/log/cron
 /var/log/kern.log
 /var/log/message
 /var/log/lastlog‬‬
@@ -110,18 +143,26 @@
 /etc/utmp
 /etc/wtmp
 /var/adm
-/var/log
-/var/logs
+/var/log/wtmp
+/var/log/utmp
 /var/run/utmp
-/var/apache/log
-/var/apache/logs
-/usr/local/apache/log
-/usr/local/apache/logs
-/root/.bash_logout
-/root/.bash_history
-/root/.ksh_history
+/var/log/yum.log
+/var/log/daemon.log
+
+
+
+# --- PRIORITY LAST ---
+## Other
+/var/log/error_log
+/var/log/error.log
+/var/log/access_log
+/var/log/access.log
+/logs/error.log
+/logs/access.log
+/logs/error_log
+/logs/access_log
 /tmp/logs
-/var/log/nginx/access.log
 /logs/agent_lo
 /logs/referer_log
-/var/log/apache2
+/Library/Logs/
+/var/log/dmesg
