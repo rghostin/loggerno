@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# todo
-# clear all history files in homes for all users
-
-set -e
 set -a
 
 TRACKFILE="tracks.txt"
@@ -23,6 +19,10 @@ logstatus() {
 
 logmsg() {
     printf '%-100s: %s\n' "${CYAN}[*] $1${NC}" ""
+}
+
+logwarning() {
+    printf '%-100s: %s\n' "${RED}[!] $1${NC}" ""
 }
 
 
@@ -83,9 +83,12 @@ done < "${TRACKFILE}"
 
 # process all _history files
 logmsg "Processing history files"
-find / -type f -name "*_history" -exec bash -c 'process_carefull "$0"' {} \;
+find / -type f -name "*_history" -not \( -path /run -prune \) -exec bash -c 'process_carefull "$0"' {} \;
 
 # process all .log , in case we missed something
 logmsg "Processing all .log files"
 find / -type f -name "*.log" -exec bash -c 'process_carefull "$0"' {} \;
 
+
+# warnings
+logwarning "DO NOT FORGET to clear history: history -c"
