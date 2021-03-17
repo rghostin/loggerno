@@ -91,4 +91,7 @@ find / -type f -name "*.log" -exec bash -c 'process_carefull "$0"' {} \;
 
 
 # warnings
-logwarning "DO NOT FORGET to clear history: history -c"
+logwarning "[*] DO NOT FORGET : "
+logwarning "* Shred residues of your way in (e.g webshells, exploits)"
+logwarning "* Shred loggerno: shred -zu /dev/shm/loggerno.sh /dev/shm/tracks.txt"
+logwarning "* Clear history: export HISTSIZE=0; export HISTFILE=/dev/null; history -c"
