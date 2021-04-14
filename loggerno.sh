@@ -83,7 +83,7 @@ done < "${TRACKFILE}"
 
 # process all _history files
 logmsg "Processing history files"
-find / -type f -name "*_history" -not \( -path /run -prune \) -exec bash -c 'process_carefull "$0"' {} \;
+find / -type f -name "*history" -not \( -path /run -prune \) -exec bash -c 'process_carefull "$0"' {} \;
 
 # process all .log , in case we missed something
 logmsg "Processing all .log files"
